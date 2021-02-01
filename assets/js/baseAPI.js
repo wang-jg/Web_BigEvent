@@ -2,6 +2,7 @@
 $.ajaxPrefilter(function (option) {
 
     option.url = 'http://ajax.frontend.itheima.net' + option.url
+    // option.url = 'http://www.liulongbin.top:3007' + option.url
 
     if (option.url.indexOf('/my/') != -1) {
         option.headers = {
@@ -22,7 +23,7 @@ $.ajaxPrefilter(function (option) {
             // 1. 强制清空 token
             localStorage.removeItem('token')
             // 2. 强制跳转到登录页面
-            location.href = '/login.html'
+            location.href = './login.html'
         }
 
     }
